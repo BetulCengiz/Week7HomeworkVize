@@ -57,4 +57,70 @@ new_data
 modified_data <- Package::replace_na_with_zero(new_data)
 modified_data
 ```
+## Q4: Veri Analizi
+#### Veri analizimize , daha önce veri kontrolünü yapmış olduğumuz verilerimiz ile işlemlerimize devam ediyoruz.
+```{r}
+# modified_data veri çerçevesini CSV dosyasına kaydedin
+write.csv(modified_data, file = "modified_data.csv")
+# lowest_yearly_earnings sütunundaki ortalamayı hesaplayın
+ortalama_yuksek_kazanc <- mean(modified_data$highest_yearly_earnings)
+# Ortalama değeri yazdırın
+print(ortalama_yuksek_kazanc)
+
+
+```
+#### Tüm kazançlardan ortalama en yüksek kazancı buluyoruz 
+#### Daha sonra bu ortalama değerin üzerinde olan kazanç değerlerini buluyoruz 
+
+```{r}
+
+# 2. Ortalamanın Üzerindeki Değerleri Bulma
+
+# Ortalama değerin üzerinde olan highest_yearly_earnings değerlerini seçin
+yuksek_kazanc_veri <- modified_data[modified_data$highest_yearly_earnings > ortalama_yuksek_kazanc, ]
+print(yuksek_kazanc_veri)
+
+```
+- Ortalamanın üzerinde bulduğumuz kazanç değerlerine sahip kanalların kanal tipini analiz ederek  görselleştiriyoruz.
+
+- Elde ettiğimiz verilere göre United States'de ortalamanın üzerinde kazanmak isteyen bir müşterinin YouTube platformuna kanal tipi olarak "Eğlence" içeriği ile girişi yapmasının mantıklı olacağını gözlemliyoruz.
+
+```{r}
+# 3. Kanal Tiplerini Bulma
+
+# Seçilen satırların indekslerini bulun
+yuksek_kazanc_indeksler <- which(modified_data$highest_yearly_earnings > ortalama_yuksek_kazanc)
+
+# Bu indekslere göre kanal tiplerini seçin
+yuksek_kazanc_kanal_tipleri <- modified_data$channel_type[yuksek_kazanc_indeksler]
+
+# 4. Grafik Oluşturma
+
+# ggplot2 paketini yükleyin (eğer yüklü değilse)
+library(ggplot2)
+
+# Çubuk grafiği oluşturun
+ggplot(yuksek_kazanc_veri, aes(x = channel_type, y = highest_yearly_earnings)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Yillik 6.904.969 dolar Uzerindeki Kazanclar Kanal Turune Gore", x = "Kanal Turu", y = "Kazanc")
+
+```
+
+- Bir diğer analizimizde ise bu sefer kazanç değerleri aksine abone sayılarını baz alıyoruz ve en çok abonoye sahip olan ilk 100 kanalın kanal tipini bir grafik ile görselleştiriyoruz. 
+
+- Kazanç değerlerinden farklı olarak United States de eğer fazla aboneye sahip olmak istiyorsanız Müzik kanal tipi ilk sırada gelirken Eğlence kanal tipi 2. sırada yer alıyor.
+
+
+```{r}
+dataP <- head(modified_data, 100)
+
+# Pasta grafik oluştur
+p <- ggplot(dataP, aes(x = "", fill = channel_type)) +
+  geom_bar(width = 1) +
+  coord_polar("y", start = 0) +
+  theme_void()
+
+# Grafik nesnesini görüntüle
+print(p)
+```
 
