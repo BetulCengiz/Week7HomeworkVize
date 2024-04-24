@@ -21,7 +21,6 @@ Analizimiz sonucunda elde edeceğimiz KPI'lar şunlar olacak:
 - Belirli bir bölgede veya ülkede en gelir elde eden kanalların kategorileri ve içerik türleri
 - En popüler içerik konseptlerinin görselleştirilmiş istatistikleri
 - Müşterilerimize önerilecek içerik stratejileri ve konseptleri
-
 ```{r}
 library("RSQLite")
 library("DBI")

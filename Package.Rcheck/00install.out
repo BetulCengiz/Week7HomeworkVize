@@ -1,7 +1,9 @@
 * installing *source* package 'Package' ...
 ** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
 ** help
-No man pages found in package  'Package' 
 *** installing help indices
 ** building package indices
 ** testing if installed package can be loaded from temporary location
