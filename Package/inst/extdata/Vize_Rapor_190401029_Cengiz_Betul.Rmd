@@ -22,6 +22,7 @@ Analizimiz sonucunda elde edeceğimiz KPI'lar şunlar olacak:
 - En popüler içerik konseptlerinin görselleştirilmiş istatistikleri
 - Müşterilerimize önerilecek içerik stratejileri ve konseptleri
 
+## Q2: Veri İthali 
 ```{r}
 library("RSQLite")
 library("DBI")
