@@ -21,12 +21,15 @@ Analizimiz sonucunda elde edeceğimiz KPI'lar şunlar olacak:
 - Belirli bir bölgede veya ülkede en gelir elde eden kanalların kategorileri ve içerik türleri
 - En popüler içerik konseptlerinin görselleştirilmiş istatistikleri
 - Müşterilerimize önerilecek içerik stratejileri ve konseptleri
+
+## Q2: Veri İthali 
 ```{r}
 library("RSQLite")
 library("DBI")
 library(readr)
 library(dplyr)
 library(ggplot2)
+library(haven)
 
 dbname<-"Vize_Q2_190401029_Cengiz_Betul.sqlite"
 
@@ -35,5 +38,23 @@ con<-Package::connect_to_database(dbname)
 youtube <- read.csv("GlobalYouTubeStatistics.csv")
 
 dbWriteTable(con, "youtube", youtube, overwrite = TRUE)
+```
+## Q3: Veri Kalite Kontrolü
+```{r}
+# Verileri veritabanından çek
+youtube_data <- Package::get_youtube_data()
+Package::dataTypes(youtube_data)
+# Filtrelenmiş veriyi yeni bir veri çerçevesine kaydet
+
+```
+```{r}
+new_data <- Package::filteredData(youtube_data)
+# Yeni veriyi inceleyin
+new_data
+```
+
+```{r}
+modified_data <- Package::replace_na_with_zero(new_data)
+modified_data
 ```
 

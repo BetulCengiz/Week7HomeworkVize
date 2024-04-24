@@ -27,11 +27,24 @@ Type 'q()' to quit R.
 > library(Package)
 > 
 > test_check("Package")
-Error in `test_dir()`:
-! No test files found
+[ FAIL 2 | WARN 0 | SKIP 0 | PASS 0 ]
+
+══ Failed tests ════════════════════════════════════════════════════════════════
+── Error ('test_data.R:8:3'): connect_to_database fonksiyonunun doğru çalıştığı doğrulandı ──
+<packageNotFoundError/error/condition>
+Error in `library(RSQLite)`: there is no package called 'RSQLite'
 Backtrace:
     ▆
- 1. └─testthat::test_check("Package")
- 2.   └─testthat::test_dir("testthat", package = package, reporter = reporter, ..., load_package = "installed")
- 3.     └─rlang::abort("No test files found")
+ 1. └─Package::connect_to_database(temp_db) at test_data.R:8:3
+ 2.   └─base::library(RSQLite)
+── Error ('test_data.R:32:3'): filteredData fonksiyonunun doğru çalıştığı doğrulandı ──
+<packageNotFoundError/error/condition>
+Error in `library(dplyr)`: there is no package called 'dplyr'
+Backtrace:
+    ▆
+ 1. └─Package::filteredData(test_data) at test_data.R:32:3
+ 2.   └─base::library(dplyr)
+
+[ FAIL 2 | WARN 0 | SKIP 0 | PASS 0 ]
+Error: Test failures
 Execution halted
