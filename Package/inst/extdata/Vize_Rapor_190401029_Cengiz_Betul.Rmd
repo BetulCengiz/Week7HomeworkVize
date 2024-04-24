@@ -124,3 +124,16 @@ p <- ggplot(dataP, aes(x = "", fill = channel_type)) +
 print(p)
 ```
 
+## Q5: Sonuçlar ve Değerlendirmeler
+
+- Analizlerimize göre, veri setini kullanarak belirli kanal türlerinin performansını ve trendlerini başarıyla belirledim. Özellikle, United States'de Eğlence içerikli kanalların ortalamanın üzerinde kazanç elde etmek için mantıklı bir seçenek olduğunu ve Müzik kanallarının abone sayılarına göre öne çıktığını gözlemledim. Bu sonuçlar, veri analizimizin istenilen sonuçlara ulaşma başarısını göstermektedir.
+
+- Şirketimizden danışmanlık isteyen müşterimizin problemi United States'de yeni bir Youtube kanalı girişimcisi olarak hangi kanal tipinde içerik üretirse başarılı olabileceği idi.Analiz sonuçlarımıza göre öncelikle yıllık olarak ortalamanın üstünde bir gelir elde etmek istiyorsa "Entartainment" tipinde bir kanal ile girişimini başlatması önerisinde bulunduk.Diğer yandan gelir miktarını filtrelemeden abone kazanıp daha çok popüler olması konusunda bir öneri olarak ise "Music" içerik üreticisi olmasını önermekteyiz.
+
+#### Çalışmanın Genişletilmesi ve Devamı İçin Öneriler:
+
+- Gelecekteki çalışmalarım için, belirli kanal türlerinin performansını daha ayrıntılı olarak incelemeyi düşünüyorum. Örneğin, kazançları etkileyen faktörleri veya abone sayılarını artıran stratejileri daha derinlemesine araştırarak daha kapsamlı bir analiz sunabilirim. 
+
+- Ayrıca, coğrafi bölgelere göre eğilimleri karşılaştırarak küresel bir perspektif sunmak da ilginç olabilir. Veri setini genişletmek ve farklı kaynaklardan elde edilen verilerle birleştirmek de analizlerimi geliştirmek için faydalı olabilir. 
+
+- Son olarak, analizlerimin sonuçlarını daha açıklayıcı ve detaylı bir şekilde sunarak okuyucuların anlamasını kolaylaştırmayı hedefliyorum. Veri setinin kaynağı, temizlenme ve işlenme yöntemleri hakkında daha fazla bilgi vermek, çalışmamın güvenilirliğini artırabilir.
