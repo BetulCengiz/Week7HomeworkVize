@@ -1,0 +1,23 @@
+## Q1: İş, Problem ve İhtiyaç Tanımı
+
+### Q1.1 İş Tanımı
+Firma Adı: Bety Social Media Consultancy
+
+Bety Social Media Consultancy, dijital pazarlama stratejileri üzerine uzmanlaşmış bir danışmanlık firmasıdır. YouTube platformunda içerik üretimi yapmak isteyen markaların ve bireylerin dijital varlıklarını yönetmek ve büyütmek için veri odaklı çözümler sunar. Müşterilerine hedef kitlelerine ulaşmaları ve abone sayılarını artırmaları konusunda destek sağlar.
+
+### Q1.2 Problem ve İhtiyaç
+Şirketimizin karşılaştığı temel problem, YouTube platformunda içerik üretimi yapmak isteyen müşterilerin hangi konseptin daha çok ilgi çekeceğini ve gelir getireceğini belirleyememeleridir. Bu nedenle, müşterilerimizden gelen talepler doğrultusunda doğru içerik stratejilerini belirleyebilmek için kapsamlı bir veri analizine ihtiyaç duyulmaktadır.
+
+### Q1.3 Çözüm
+
+#### Çözüm Önerisi - Veri Seti Tanımı
+Bulduğumuz veri seti, YouTube platformunda yer alan kanalların Global Youtube 2023 istatistiklerini içermektedir. Bu veri setinde, kanalların abone sayıları, izlenme sayıları, videoların kategorileri ve içerik türleri gibi parametreler bulunmaktadır.
+
+#### Çözüm Önerisi - Planlanan Analiz (Özet)
+Yapmayı planladığımız analizde, veri setini kullanarak belirli bir bölge veya ülkede en çok bulunan kanal kategorisini, konsept istatistiklerini belirlemeyi amaçlıyoruz. Bunun için, veri setini filtreleyip, kanalları seçecek ve bu kanalların kategorilerini ve içerik türlerini analiz edeceğiz. Bu analiz, müşterilerimize hangi içerik konseptlerinin daha fazla ilgi çekebileceği konusunda bilgi sağlayacaktır.
+
+#### Çözüm Önerisi - Planlanan Analiz Sonuçları
+Analizimiz sonucunda elde edeceğimiz KPI'lar şunlar olacak:
+- Belirli bir bölgede veya ülkede en gelir elde eden kanalların kategorileri ve içerik türleri
+- En popüler içerik konseptlerinin görselleştirilmiş istatistikleri
+- Müşterilerimize önerilecek içerik stratejileri ve konseptleri

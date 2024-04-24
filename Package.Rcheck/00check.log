@@ -1,0 +1,64 @@
+* using log directory 'C:/Week7HomeworkVize/Package.Rcheck'
+* using R version 4.3.3 (2024-02-29 ucrt)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* R was compiled by
+    gcc.exe (GCC) 12.3.0
+    GNU Fortran (GCC) 12.3.0
+* running under: Windows 11 x64 (build 22631)
+* using session charset: UTF-8
+* checking for file 'Package/DESCRIPTION' ... OK
+* this is package 'Package' version '0.0.0.9000'
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking whether package 'Package' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... WARNING
+Non-standard license specification:
+  `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+  license
+Standardizable: FALSE
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking examples ... NONE
+* checking for unstated dependencies in 'tests' ... OK
+* checking tests ... ERROR
+  Running 'testthat.R'
+Running the tests in 'tests/testthat.R' failed.
+Last 13 lines of output:
+  > # * https://r-pkgs.org/testing-design.html#sec-tests-files-overview
+  > # * https://testthat.r-lib.org/articles/special-files.html
+  > 
+  > library(testthat)
+  > library(Package)
+  > 
+  > test_check("Package")
+  Error in `test_dir()`:
+  ! No test files found
+  Backtrace:
+      ▆
+   1. └─testthat::test_check("Package")
+   2.   └─testthat::test_dir("testthat", package = package, reporter = reporter, ..., load_package = "installed")
+   3.     └─rlang::abort("No test files found")
+  Execution halted
+* checking PDF version of manual ... WARNING
+LaTeX errors when creating PDF version.
+This typically indicates Rd problems.
+* checking PDF version of manual without index ... ERROR
+Re-running with no redirection of stdout/stderr.
+* DONE
+Status: 2 ERRORs, 2 WARNINGs
